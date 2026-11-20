@@ -82,51 +82,6 @@
       </div>
     </section>
 
-    <!-- 3. The demo: setting up a measurement is the thing to grasp. Drawn like the app (script.js). -->
-    <section id="demo">
-      <h2 class="section-title">Set up anything in a minute</h2>
-      <p class="section-lead">List what you write down each time. The app makes the form. Try it.</p>
-
-      <div class="chips" role="group" aria-label="Examples">
-        <button class="chip" data-demo="run" aria-pressed="true">'morning run'</button>
-        <button class="chip" data-demo="mood" aria-pressed="false">'mood'</button>
-        <button class="chip" data-demo="trivia" aria-pressed="false">'trivial pursuit'</button>
-        <button class="chip" data-demo="cat" aria-pressed="false">'the neighbour's cat'</button>
-      </div>
-
-      <div class="app-demo">
-        <div class="phone">
-          <div class="step-label"><span>1</span> Set up</div>
-          <div class="app">
-            <div class="app-title">Setup measurement(s)</div>
-            <div id="setup-fields"></div>
-            <button class="app-text-button" id="add-field">+ Add field</button>
-          </div>
-        </div>
-
-        <div class="phone">
-          <div class="step-label"><span>2</span> Record</div>
-          <div class="app">
-            <div class="app-node" id="app-node">Morning run</div>
-
-            <div class="entry-card">
-              <div class="entry-head">
-                <span class="entry-title">New observation</span>
-                <span class="time-pill">Now <span class="chev">▾</span></span>
-              </div>
-              <div id="entry-fields"></div>
-              <button class="app-button" id="save-observation">Save observation</button>
-            </div>
-
-            <div class="recent-title" id="recent-title" hidden>Recent</div>
-            <div id="recent"></div>
-
-            <div class="snackbar" id="snackbar" role="status">Observation saved</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- 4. How it works: two tools, concrete, with the real app -->
     <section>
       <h2 class="section-title">Two tools in one</h2>
@@ -181,6 +136,51 @@
               <li><strong>Unbiased:</strong> it never judges what's good or bad. It only calculates, and says "goes with", never "causes".</li>
             </ul>
           </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. The demo: setting up a measurement is the thing to grasp. Drawn like the app (script.js). -->
+    <section id="demo">
+      <h2 class="section-title">Set up anything in a minute</h2>
+      <p class="section-lead">List what you write down each time. The app makes the form. Try it.</p>
+
+      <div class="chips" role="group" aria-label="Examples">
+        <button class="chip" data-demo="run" aria-pressed="true">'morning run'</button>
+        <button class="chip" data-demo="mood" aria-pressed="false">'mood'</button>
+        <button class="chip" data-demo="trivia" aria-pressed="false">'trivial pursuit'</button>
+        <button class="chip" data-demo="cat" aria-pressed="false">'the neighbour's cat'</button>
+      </div>
+
+      <div class="app-demo">
+        <div class="phone">
+          <div class="step-label"><span>1</span> Set up</div>
+          <div class="app">
+            <div class="app-title">Setup measurement(s)</div>
+            <div id="setup-fields"></div>
+            <button class="app-text-button" id="add-field">+ Add field</button>
+          </div>
+        </div>
+
+        <div class="phone">
+          <div class="step-label"><span>2</span> Record</div>
+          <div class="app">
+            <div class="app-node" id="app-node">Morning run</div>
+
+            <div class="entry-card">
+              <div class="entry-head">
+                <span class="entry-title">New observation</span>
+                <span class="time-pill">Now <span class="chev">▾</span></span>
+              </div>
+              <div id="entry-fields"></div>
+              <button class="app-button" id="save-observation">Save observation</button>
+            </div>
+
+            <div class="recent-title" id="recent-title" hidden>Recent</div>
+            <div id="recent"></div>
+
+            <div class="snackbar" id="snackbar" role="status">Observation saved</div>
+          </div>
         </div>
       </div>
     </section>
