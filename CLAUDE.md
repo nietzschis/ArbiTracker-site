@@ -20,3 +20,6 @@ Static site for **https://arbitracker.app**, served by GitHub Pages from `main` 
 
 ## DNS (simply.com)
 Apex `arbitracker.app`: A records 185.199.108.153 / .109.153 / .110.153 / .111.153; `www`: CNAME to `<github-user>.github.io`. `.app` is HTTPS-only, so "Enforce HTTPS" must be on in Pages settings.
+
+## Contact
+Public address: `contact@arbitracker.app` (forwarded by ImprovMX; MX + SPF TXT records at simply.com). Never put the inbox it forwards to on the site or in this public repo.
