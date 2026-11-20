@@ -148,7 +148,7 @@ h2.section-title {
   color: var(--primary);
   font-weight: 600;
   display: inline-block;
-  transition: opacity 0.25s, transform 0.25s;
+  transition: opacity 0.4s, transform 0.4s;
 }
 
 .rotator .example.out { opacity: 0; transform: translateY(6px); }
@@ -180,9 +180,11 @@ h2.section-title {
 .purpose {
   max-width: 560px;
   margin: -10px auto 26px;
-  font-size: 18px;
+  font-size: 19px;
   color: var(--muted);
 }
+
+.soon { color: var(--muted); font-size: 14px; margin: 12px 0 0; }
 
 .purpose strong { color: var(--text); }
 
@@ -204,6 +206,27 @@ h2.section-title {
 .versus-col.us { border: 2px solid var(--green); box-shadow: 0 12px 34px rgba(7, 138, 92, 0.15); }
 .versus-col.us h3 { color: var(--green); }
 .versus-col.us li::before { content: "✓"; position: absolute; left: 2px; color: var(--green); font-weight: 700; }
+
+.compare-teaser {
+  margin-top: 22px;
+  text-align: center;
+  padding: 26px 18px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, var(--primary-soft), var(--green-soft));
+}
+
+.compare-q { font-size: clamp(21px, 4.4vw, 28px); font-weight: 700; line-height: 1.35; margin: 0 0 8px; }
+
+.compare-teaser .pair {
+  color: var(--primary);
+  display: inline-block;
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.compare-teaser .pair.b { color: var(--green); }
+.compare-teaser .pair.out { opacity: 0; transform: translateY(6px); }
+
+.compare-a { color: var(--muted); margin: 0; }
 
 /* ---------- Two tools in one ---------- */
 .pillars {
@@ -706,6 +729,9 @@ details.more li { margin: 4px 0; }
   font-size: 15px;
 }
 
+.free-promise { max-width: 560px; margin: 0 auto 18px; color: var(--muted); }
+.free-promise strong { color: var(--text); }
+
 .private .small { color: var(--muted); font-size: 15px; margin: 16px 0 0; }
 
 /* ---------- Examples strip ---------- */
@@ -736,7 +762,7 @@ details.more li { margin: 4px 0; }
   opacity: 0;
   transform: translateY(16px);
   pointer-events: none;
-  transition: opacity 0.25s, transform 0.25s;
+  transition: opacity 0.4s, transform 0.4s;
 }
 
 .float-idea.show { opacity: 1; transform: none; pointer-events: auto; }
@@ -825,5 +851,5 @@ footer a { color: var(--muted); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .def-card, .form-field, .recent-item, .rotator .example { animation: none; transition: none; }
+  .def-card, .form-field, .recent-item, .rotator .example, .compare-teaser .pair { animation: none; transition: none; }
 }

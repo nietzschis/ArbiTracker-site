@@ -1,4 +1,4 @@
-// ArbiTracker site: the rotating example, the app demo and the tabs.
+// ArbiTracker site: the rotating example, the app demo, screenshots and the idea button.
 // Own code only: no outside scripts, no tracking (see privacy.html).
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -27,8 +27,40 @@ if (exampleEl && !reduceMotion) {
       index = (index + 1) % examples.length;
       exampleEl.textContent = examples[index];
       exampleEl.classList.remove("out");
-    }, 250);
-  }, 2200);
+    }, 400);
+  }, 4000);
+}
+
+// ---------- Compare teaser: funny pairs ----------
+const pairs = [
+  ["'sleep'", "'the full moon'"],
+  ["'mood'", "'the neighbour's cat visiting'"],
+  ["'chess wins'", "'your lucky socks'"],
+  ["'headaches'", "'your team losing'"],
+  ["'sleep'", "'spicy dinners'"],
+  ["'houseplant growth'", "'talking to them'"],
+  ["'productivity'", "'how messy your desk is'"],
+  ["'mood'", "'rainy days'"]
+];
+
+const pairA = document.getElementById("pair-a");
+const pairB = document.getElementById("pair-b");
+
+if (pairA && pairB && !reduceMotion) {
+  let p = 0;
+
+  setInterval(() => {
+    pairA.classList.add("out");
+    pairB.classList.add("out");
+
+    setTimeout(() => {
+      p = (p + 1) % pairs.length;
+      pairA.textContent = pairs[p][0];
+      pairB.textContent = pairs[p][1];
+      pairA.classList.remove("out");
+      pairB.classList.remove("out");
+    }, 400);
+  }, 5000);
 }
 
 // ---------- Setup demo, drawn like the app ----------
@@ -333,19 +365,6 @@ document.getElementById("save-observation")?.addEventListener("click", () => {
 presetChips.forEach((chip) => chip.addEventListener("click", () => loadPreset(chip.dataset.demo)));
 
 if (setupEl && entryEl) loadPreset("run");
-
-// ---------- Tabs: both kinds of curious ----------
-const tabs = document.querySelectorAll(".tab[role=tab]");
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    tabs.forEach((other) => {
-      const selected = other === tab;
-      other.setAttribute("aria-selected", String(selected));
-      document.getElementById(other.getAttribute("aria-controls")).hidden = !selected;
-    });
-  });
-});
 
 // ---------- Screenshots: tap to see the whole screen ----------
 const lightbox = document.getElementById("lightbox");

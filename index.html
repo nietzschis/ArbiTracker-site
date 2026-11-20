@@ -3,8 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ArbiTracker – track anything</title>
-  <meta name="description" content="Turn your phone into a data collector for anything, and let an honest lab find the patterns. Everything stays on your phone.">
+  <title>ArbiTracker – track anything, compare everything</title>
+  <meta name="description" content="The free tracking app with no agenda. Track anything in your own structure, compare anything with anything, and see how sure each finding is. Your data stays on your phone.">
+
+  <!-- Link previews (Reddit, messages, social media) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arbitracker.app/">
+  <meta property="og:title" content="ArbiTracker – track anything, compare everything">
+  <meta property="og:description" content="The free tracking app with no agenda. Track anything, compare anything with anything, and see how sure each finding is. Your data stays on your phone.">
+  <meta property="og:image" content="https://arbitracker.app/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
@@ -18,34 +29,29 @@
 
   <main>
 
-    <!-- 1. The bangers -->
+    <!-- 1. Hero: the differentiator first -->
     <section class="hero">
-      <img class="icon" src="images/icon-512.png" alt="" width="104" height="104">
       <img class="wordmark light" src="images/wordmark-light.png" alt="ArbiTracker" width="700" height="101">
       <img class="wordmark dark" src="images/wordmark-dark.png" alt="ArbiTracker" width="700" height="101">
 
-      <h1>Track anything.<br><span class="accent">See what it means.</span></h1>
+      <h1>Track anything.<br><span class="accent">Compare everything.</span></h1>
 
       <p class="rotator">Like <span class="example" id="example">'sleep'</span></p>
 
-      <p class="purpose">The tracking app with <strong>no agenda</strong>. You decide what to track, and <strong>anything can be compared with anything</strong>.</p>
+      <p class="purpose"><strong>Free.</strong> No agenda. No account. No servers.</p>
 
       <div class="buttons">
-        <!-- Replace with the Google Play link once the app is live. -->
-        <span class="button play">Coming soon to Google Play</span>
+        <!-- Until launch: the Play line is a label, the button asks to be told. Swap for the Play badge/link on launch day. -->
+        <a class="button play" href="mailto:contact@arbitracker.app?subject=Tell%20me%20when%20ArbiTracker%20is%20out">Tell me when it's out</a>
         <a class="button guide" href="guide.html">Read the guide →</a>
       </div>
-
-      <a class="hero-invite" href="#contact">
-        <span class="hero-invite-emoji">💌</span>
-        <span><strong>Made by one person, shaped by you.</strong> Your ideas and use cases decide what comes next. I read every mail.</span>
-      </a>
+      <p class="soon">Coming soon to Google Play</p>
     </section>
 
-    <!-- 1b. Versus other tracking apps -->
+    <!-- 2. Versus other tracking apps -->
     <section>
       <h2 class="section-title">Not another habit app</h2>
-      <p class="section-lead">Most trackers decide for you. This one asks what you want to know.</p>
+      <p class="section-lead">Most trackers decide for you. This one asks what you want to know, whether you have a hunch or no idea yet.</p>
 
       <div class="versus">
         <div class="card versus-col them">
@@ -55,7 +61,7 @@
             <li>Their goal, their idea of success</li>
             <li>One chart per thing, side by side</li>
             <li>Big claims from little data</li>
-            <li>Often: an account, and your data on their servers</li>
+            <li>Often: an account, a subscription, your data on their servers</li>
           </ul>
         </div>
 
@@ -66,71 +72,18 @@
             <li>No agenda. Goals only if you want them</li>
             <li><strong>Compare anything with anything</strong>: every measurement against every other</li>
             <li>Says how sure it is, or that it needs more data</li>
-            <li>Your data never leaves your phone</li>
+            <li>Free, and your data never leaves your phone</li>
           </ul>
         </div>
       </div>
-    </section>
 
-    <!-- 2. Two tools in one -->
-    <section>
-      <h2 class="section-title">Two tools in one</h2>
-      <p class="section-lead">Use one, or both.</p>
-
-      <div class="pillars">
-        <div class="card pillar collect">
-          <span class="label">Collect</span>
-          <h3>Your phone as a data collector</h3>
-          <ul class="checks">
-            <li>Any structure you want</li>
-            <li>Log in seconds, even from a notification</li>
-            <li>No agenda. Just a good tool</li>
-          </ul>
-
-          <div class="shots two">
-            <img class="shot" src="images/record.webp" alt="Recording a trivial pursuit question: pick the type, flip Correct, save" width="540" height="1086" loading="lazy">
-            <img class="shot" src="images/group.webp" alt="Group mode: every exercise of 'Weightlifting' on one screen, each with its own entry card" width="540" height="1086" loading="lazy">
-          </div>
-
-          <details class="more">
-            <summary>More</summary>
-            <ul>
-              <li><strong>Nodes:</strong> everything you track is a node, and nodes can hold nodes. 'garden' holds 'tomatoes' and 'basil', each with its own measurements.</li>
-              <li><strong>Any kind of value:</strong> numbers, yes/no, categories, text and times, with optional rules like "whole numbers from 1 to 10".</li>
-              <li><strong>Calculated values:</strong> combine measurements into new ones, like a weekly total.</li>
-              <li><strong>Only want the data?</strong> Save it as CSV and use it anywhere.</li>
-            </ul>
-          </details>
-        </div>
-
-        <div class="card pillar understand">
-          <span class="label">Understand</span>
-          <h3>An honest lab for your data</h3>
-          <ul class="checks">
-            <li>Compare anything with anything</li>
-            <li>Says how sure it is, or that it needs more data</li>
-            <li>More data, more hidden patterns</li>
-          </ul>
-
-          <div class="shots two">
-            <img class="shot" src="images/lab-chart.webp" alt="A Lab card: a bar chart per weekday" width="540" height="1086" loading="lazy">
-            <img class="shot" src="images/lab-reliability.webp" alt="Data reliability: direction, trend, amount of data and odd values, each with a plain explanation" width="540" height="1086" loading="lazy">
-          </div>
-
-          <details class="more">
-            <summary>More</summary>
-            <ul>
-              <li><strong>Trends</strong> are checked against chance and odd values before the app calls something rising or falling.</li>
-              <li><strong>Relations</strong> are checked without the shared trend over time, so two things that both just grow don't look related.</li>
-              <li><strong>Timing:</strong> does a day of 'board games' go with a better 'mood' the next day?</li>
-              <li><strong>Unbiased:</strong> it never judges what's good or bad. It only calculates, and says "goes with", never "causes".</li>
-            </ul>
-          </details>
-        </div>
+      <div class="compare-teaser">
+        <p class="compare-q">Ever wondered if your <span class="pair" id="pair-a">'sleep'</span><br>goes with <span class="pair b" id="pair-b">'the full moon'</span>?</p>
+        <p class="compare-a">Track both. The Lab tells you, and how sure it is.</p>
       </div>
     </section>
 
-    <!-- 3. Setting up a measurement: the thing to grasp. Drawn like the app (script.js). -->
+    <!-- 3. The demo: setting up a measurement is the thing to grasp. Drawn like the app (script.js). -->
     <section>
       <h2 class="section-title">Set up anything in a minute</h2>
       <p class="section-lead">List what you write down each time. The app makes the form. Try it.</p>
@@ -175,21 +128,61 @@
       </div>
     </section>
 
-    <!-- 4. Both kinds of curious -->
+    <!-- 4. How it works: two tools, concrete, with the real app -->
     <section>
-      <h2 class="section-title">For both kinds of curious</h2>
+      <h2 class="section-title">Two tools in one</h2>
+      <p class="section-lead">Use one, or both.</p>
 
-      <div class="tabs" role="tablist">
-        <button class="tab" role="tab" id="tab-know" aria-controls="panel-know" aria-selected="true">I know what I'm looking for</button>
-        <button class="tab" role="tab" id="tab-explore" aria-controls="panel-explore" aria-selected="false">No idea yet</button>
-      </div>
+      <div class="pillars">
+        <div class="card pillar collect">
+          <span class="label">Collect</span>
+          <h3>Your phone as a data collector</h3>
+          <ul class="checks">
+            <li>Numbers, yes/no, categories, text and times</li>
+            <li>Nodes inside nodes: any structure</li>
+            <li>Enter an observation in seconds, even from a notification</li>
+          </ul>
 
-      <div class="card tab-panel" role="tabpanel" id="panel-know" aria-labelledby="tab-know">
-        <p>Track exactly what you want, then test your hunch: do your 'houseplants' grow faster in the weeks you 'talk to them'?</p>
-      </div>
+          <div class="shots two">
+            <img class="shot" src="images/record.webp" alt="Entering an observation: pick the question type, flip Correct, save" width="540" height="1086" loading="lazy">
+            <img class="shot" src="images/group.webp" alt="Group mode: every exercise of 'Weightlifting' on one screen, each with its own entry card" width="540" height="1086" loading="lazy">
+          </div>
 
-      <div class="card tab-panel" role="tabpanel" id="panel-explore" aria-labelledby="tab-explore" hidden>
-        <p>Just collect. The more you log, the more the app can compare, and the patterns come to you.</p>
+          <details class="more">
+            <summary>More</summary>
+            <ul>
+              <li><strong>Nodes:</strong> 'garden' holds 'tomatoes' and 'basil', each with its own measurements.</li>
+              <li><strong>Rules</strong> like "whole numbers from 1 to 10" turn the input into tappable numbers.</li>
+              <li><strong>Calculated values:</strong> combine measurements into new ones, like a weekly total.</li>
+              <li><strong>Only want the data?</strong> Save it as CSV and use it anywhere.</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="card pillar understand">
+          <span class="label">Understand</span>
+          <h3>An honest lab for your data</h3>
+          <ul class="checks">
+            <li>Trends, weekdays, time of day, categories</li>
+            <li>Relations between any two things, same day or the next</li>
+            <li>A reliability check on every finding</li>
+          </ul>
+
+          <div class="shots two">
+            <img class="shot" src="images/lab-chart.webp" alt="A Lab card: a bar chart per weekday" width="540" height="1086" loading="lazy">
+            <img class="shot" src="images/lab-reliability.webp" alt="Data reliability: direction, trend, amount of data and odd values, each with a plain explanation" width="540" height="1086" loading="lazy">
+          </div>
+
+          <details class="more">
+            <summary>More</summary>
+            <ul>
+              <li><strong>Trends</strong> are checked against chance and odd values before the app calls something rising or falling.</li>
+              <li><strong>Relations</strong> are checked without the shared trend over time, so two things that both just grow don't look related.</li>
+              <li><strong>Timing:</strong> does a day of 'board games' go with a better 'mood' the next day?</li>
+              <li><strong>Unbiased:</strong> it never judges what's good or bad. It only calculates, and says "goes with", never "causes".</li>
+            </ul>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -227,11 +220,14 @@
       </div>
     </section>
 
-    <!-- 6. Private by design -->
+    <!-- 6. Free and yours -->
     <section class="private">
-      <h2>Your data. Only on your phone.</h2>
+      <h2>Free. Your data. Only on your phone.</h2>
+
+      <p class="free-promise">Collecting, organising, reminders, random check-ins and exporting your data are <strong>free, and always will be</strong>. The Lab's analysis tools are free too.</p>
 
       <div class="pills">
+        <span class="pill">Free</span>
         <span class="pill">Works offline</span>
         <span class="pill">Nothing leaves your phone</span>
         <span class="pill">Never sold</span>
@@ -258,11 +254,10 @@
       </div>
 
       <div class="buttons" style="margin-top: 26px">
-        <span class="button play">Coming soon to Google Play</span>
+        <a class="button play" href="mailto:contact@arbitracker.app?subject=Tell%20me%20when%20ArbiTracker%20is%20out">Tell me when it's out</a>
         <a class="button guide" href="guide.html">Read the guide →</a>
       </div>
     </section>
-
 
     <!-- 8. Contact: send ideas and use cases -->
     <section class="contact" id="contact">
