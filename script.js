@@ -1,35 +1,7 @@
-// ArbiTracker site: the rotating example, the app demo, screenshots and the idea button.
+// ArbiTracker site: the compare teaser, the app demo, screenshots and the idea button.
 // Own code only: no outside scripts, no tracking (see privacy.html).
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-// ---------- Rotating example in the hero ----------
-const examples = [
-  "'sleep'",
-  "'bird sightings'",
-  "'mood at random moments'",
-  "'every time the neighbour's cat visits'",
-  "'guitar practice'",
-  "'sourdough rise'",
-  "'visits to grandma'",
-  "'trivial pursuit answers'"
-];
-
-const exampleEl = document.getElementById("example");
-
-if (exampleEl && !reduceMotion) {
-  let index = 0;
-
-  setInterval(() => {
-    exampleEl.classList.add("out");
-
-    setTimeout(() => {
-      index = (index + 1) % examples.length;
-      exampleEl.textContent = examples[index];
-      exampleEl.classList.remove("out");
-    }, 400);
-  }, 4000);
-}
 
 // ---------- Compare teaser: funny pairs ----------
 const pairs = [
