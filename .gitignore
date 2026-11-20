@@ -1,0 +1,17 @@
+# OS / editor clutter
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Never publish secrets or app build files here (the site repo is public)
+*.jks
+*.keystore
+*.aab
+*.apk
+.env
+
+# Claude Code local settings
+.claude/settings.local.json

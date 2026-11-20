@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArbiTracker – track anything</title>
+  <meta name="description" content="Turn your phone into a data collector for anything, and let an honest lab find the patterns. Everything stays on your phone.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+
+    <!-- 1. The bangers -->
+    <section class="hero">
+      <img class="icon" src="images/icon-512.png" alt="" width="104" height="104">
+      <img class="wordmark light" src="images/wordmark-light.png" alt="ArbiTracker" width="700" height="101">
+      <img class="wordmark dark" src="images/wordmark-dark.png" alt="ArbiTracker" width="700" height="101">
+
+      <h1>Track anything.<br><span class="accent">See what it means.</span></h1>
+
+      <p class="rotator">Like <span class="example" id="example">'sleep'</span></p>
+
+      <div class="buttons">
+        <!-- Replace with the Google Play link once the app is live. -->
+        <span class="button play">Coming soon to Google Play</span>
+        <a class="button guide" href="guide.html">Read the guide →</a>
+      </div>
+    </section>
+
+    <!-- 2. Two tools in one -->
+    <section>
+      <h2 class="section-title">Two tools in one</h2>
+      <p class="section-lead">Use one, or both.</p>
+
+      <div class="pillars">
+        <div class="card pillar collect">
+          <span class="label">Collect</span>
+          <h3>Your phone as a data collector</h3>
+          <ul class="checks">
+            <li>Any structure you want</li>
+            <li>Log in seconds, even from a notification</li>
+            <li>No agenda. Just a good tool</li>
+          </ul>
+
+          <details class="more">
+            <summary>More</summary>
+            <ul>
+              <li><strong>Nodes:</strong> everything you track is a node, and nodes can hold nodes. 'garden' holds 'tomatoes' and 'basil', each with its own measurements.</li>
+              <li><strong>Any kind of value:</strong> numbers, yes/no, categories, text and times, with optional rules like "whole numbers from 1 to 10".</li>
+              <li><strong>Calculated values:</strong> combine measurements into new ones, like a weekly total.</li>
+              <li><strong>Only want the data?</strong> Save it as CSV and use it anywhere.</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="card pillar understand">
+          <span class="label">Understand</span>
+          <h3>An honest lab for your data</h3>
+          <ul class="checks">
+            <li>Compare anything with anything</li>
+            <li>Says how sure it is, or that it needs more data</li>
+            <li>More data, more hidden patterns</li>
+          </ul>
+
+          <details class="more">
+            <summary>More</summary>
+            <ul>
+              <li><strong>Trends</strong> are checked against chance and odd values before the app calls something rising or falling.</li>
+              <li><strong>Relations</strong> are checked without the shared trend over time, so two things that both just grow don't look related.</li>
+              <li><strong>Timing:</strong> does a day of 'board games' go with a better 'mood' the next day?</li>
+              <li><strong>Unbiased:</strong> it never judges what's good or bad. It only calculates, and says "goes with", never "causes".</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Setting up a measurement: the thing to grasp. Drawn like the app (script.js). -->
+    <section>
+      <h2 class="section-title">Set up anything in a minute</h2>
+      <p class="section-lead">List what you write down each time. The app makes the form. Try it.</p>
+
+      <div class="chips" role="group" aria-label="Examples">
+        <button class="chip" data-demo="run" aria-pressed="true">'morning run'</button>
+        <button class="chip" data-demo="mood" aria-pressed="false">'mood'</button>
+        <button class="chip" data-demo="trivia" aria-pressed="false">'trivial pursuit'</button>
+        <button class="chip" data-demo="cat" aria-pressed="false">'the neighbour's cat'</button>
+      </div>
+
+      <div class="app-demo">
+        <div class="phone">
+          <div class="step-label"><span>1</span> Set up</div>
+          <div class="app">
+            <div class="app-title">Setup measurement(s)</div>
+            <div id="setup-fields"></div>
+            <button class="app-text-button" id="add-field">+ Add field</button>
+          </div>
+        </div>
+
+        <div class="phone">
+          <div class="step-label"><span>2</span> Record</div>
+          <div class="app">
+            <div class="app-node" id="app-node">Morning run</div>
+
+            <div class="entry-card">
+              <div class="entry-head">
+                <span class="entry-title">New observation</span>
+                <span class="time-pill">Now <span class="chev">▾</span></span>
+              </div>
+              <div id="entry-fields"></div>
+              <button class="app-button" id="save-observation">Save observation</button>
+            </div>
+
+            <div class="recent-title" id="recent-title" hidden>Recent</div>
+            <div id="recent"></div>
+
+            <div class="snackbar" id="snackbar" role="status">Observation saved</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Both kinds of curious -->
+    <section>
+      <h2 class="section-title">For both kinds of curious</h2>
+
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" id="tab-know" aria-controls="panel-know" aria-selected="true">I know what I'm looking for</button>
+        <button class="tab" role="tab" id="tab-explore" aria-controls="panel-explore" aria-selected="false">No idea yet</button>
+      </div>
+
+      <div class="card tab-panel" role="tabpanel" id="panel-know" aria-labelledby="tab-know">
+        <p>Track exactly what you want, then test your hunch: do your 'houseplants' grow faster in the weeks you 'talk to them'?</p>
+      </div>
+
+      <div class="card tab-panel" role="tabpanel" id="panel-explore" aria-labelledby="tab-explore" hidden>
+        <p>Just collect. The more you log, the more the app can compare, and the patterns come to you.</p>
+      </div>
+    </section>
+
+    <!-- 5. Cherries on top -->
+    <section>
+      <h2 class="section-title" style="margin-bottom: 18px">Cherries on top</h2>
+
+      <div class="extras">
+        <div class="card">
+          <div class="emoji">🎲</div>
+          <h3>Random check-ins</h3>
+          <p>Get asked at random moments, for an honest picture, not just the moments you remember.</p>
+        </div>
+
+        <div class="card">
+          <div class="emoji">📌</div>
+          <h3>Your dashboard</h3>
+          <p>Pin whatever has your interest right now: things you track and charts.</p>
+        </div>
+
+        <div class="card">
+          <div class="emoji">🎯</div>
+          <h3>Goals</h3>
+          <p>Aim for '8 hours of sleep', or simply better than usual.</p>
+        </div>
+
+        <div class="card">
+          <div class="emoji">🧩</div>
+          <h3>Templates</h3>
+          <p>Start in a minute with ready setups like 'staying in touch'.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Private by design -->
+    <section class="private">
+      <h2>Your data. Only on your phone.</h2>
+
+      <div class="pills">
+        <span class="pill">Works offline</span>
+        <span class="pill">Nothing leaves your phone</span>
+        <span class="pill">Never sold</span>
+        <span class="pill">No account</span>
+        <span class="pill">Export everything</span>
+      </div>
+
+      <p class="small">No ads, no tracking. <a href="privacy.html">Privacy policy</a></p>
+    </section>
+
+    <!-- 7. Closing -->
+    <section class="closing">
+      <h2>What will you track?</h2>
+
+      <div class="examples">
+        <span>'sleep'</span>
+        <span>'mood at random moments'</span>
+        <span>'bird sightings'</span>
+        <span>'sourdough rise'</span>
+        <span>'visits to grandma'</span>
+        <span>'guitar practice'</span>
+        <span>'headaches'</span>
+        <span>'chess games'</span>
+      </div>
+
+      <div class="buttons" style="margin-top: 26px">
+        <span class="button play">Coming soon to Google Play</span>
+        <a class="button guide" href="guide.html">Read the guide →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 ArbiTracker · <a href="guide.html">Guide</a> · <a href="privacy.html">Privacy policy</a>
+  </footer>
+</body>
+</html>
