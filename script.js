@@ -364,3 +364,18 @@ if (lightbox) {
   lightbox.addEventListener("click", () => { lightbox.hidden = true; });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") lightbox.hidden = true; });
 }
+
+// ---------- Floating "Share an idea": after the hero, until the contact card ----------
+const floatIdea = document.getElementById("float-idea");
+const hero = document.querySelector(".hero");
+const contact = document.getElementById("contact");
+
+if (floatIdea && hero && contact && "IntersectionObserver" in window) {
+  let heroVisible = true;
+  let contactVisible = false;
+
+  const update = () => floatIdea.classList.toggle("show", !heroVisible && !contactVisible);
+
+  new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; update(); }).observe(hero);
+  new IntersectionObserver(([e]) => { contactVisible = e.isIntersecting; update(); }).observe(contact);
+}
