@@ -521,6 +521,56 @@ details.more li { margin: 4px 0; }
   to { opacity: 1; transform: none; }
 }
 
+/* ---------- Screenshots (tap to enlarge, script.js) ---------- */
+.shots { display: flex; justify-content: center; gap: 12px; margin: 18px 0 0; }
+
+.shot {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: 340px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.14);
+  cursor: zoom-in;
+  background: #0F1420;
+}
+
+.shots.two .shot { max-width: 48%; height: 300px; }
+
+.shot.small { height: 220px; max-width: none; margin-top: 14px; }
+
+.notif {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 14px;
+  border-radius: 18px;
+  cursor: zoom-in;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(2, 6, 23, 0.82);
+  cursor: zoom-out;
+}
+
+.lightbox[hidden] { display: none; }
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
 /* ---------- Two kinds of curious ---------- */
 .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 14px; }
 

@@ -346,3 +346,21 @@ tabs.forEach((tab) => {
     });
   });
 });
+
+// ---------- Screenshots: tap to see the whole screen ----------
+const lightbox = document.getElementById("lightbox");
+
+if (lightbox) {
+  const big = lightbox.querySelector("img");
+
+  document.querySelectorAll(".shot, .notif").forEach((img) => {
+    img.addEventListener("click", () => {
+      big.src = img.src;
+      big.alt = img.alt;
+      lightbox.hidden = false;
+    });
+  });
+
+  lightbox.addEventListener("click", () => { lightbox.hidden = true; });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") lightbox.hidden = true; });
+}

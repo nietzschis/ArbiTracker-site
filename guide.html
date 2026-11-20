@@ -17,7 +17,7 @@
     </a>
 
     <h1>Guide</h1>
-    <p class="lead">Five minutes from zero to your first chart. Tap a step to open it.</p>
+    <p class="lead">Five minutes from zero to your first chart. Tap a step to open it. Or jump to <a href="#example">a full example</a>.</p>
 
     <details class="guide-step" open>
       <summary><span class="num">1</span>Make a node<span class="hint">the thing you track</span></summary>
@@ -82,6 +82,78 @@
       <li><strong>Tips again:</strong> Dashboard ⋮ → Show tips again.</li>
       <li><strong>Swipe right</strong> to remove: a Lab card, a measurement on a card, a dashboard pin. You can undo.</li>
     </ul>
+
+    <h2 id="example">A full example: do cold showers lift your mood?</h2>
+    <p class="lead">Six weeks with one hunch, using every part of the app. Open a step to see how.</p>
+
+    <details class="guide-step">
+      <summary><span class="num">1</span>Build the tree<span class="hint">day 1, two minutes</span></summary>
+      <div class="body">
+        <p>Make a node <strong>'me'</strong> and inside it two nodes: <strong>'mornings'</strong> and <strong>'mood'</strong>. The tree is just how you like to see it; the Lab can compare anything with anything later.</p>
+      </div>
+    </details>
+
+    <details class="guide-step">
+      <summary><span class="num">2</span>Say what you write down<span class="hint">measurements and rules</span></summary>
+      <div class="body">
+        <p><strong>'mornings':</strong> Cold shower (Boolean), Cold minutes (Number, unit min), Woke up (Timestamp).</p>
+        <p><strong>'mood':</strong> Mood (Number, rule: whole numbers 1–10, so you tap a number instead of typing), Where (Category: Home, Work, Outside), Note (Text).</p>
+      </div>
+    </details>
+
+    <details class="guide-step">
+      <summary><span class="num">3</span>Make it effortless<span class="hint">reminders and check-ins</span></summary>
+      <div class="body">
+        <p>On 'mornings', a fixed reminder at 07:30 on weekdays. Answer it from the notification, or open it and save in two taps.</p>
+        <p>On 'mood', <strong>Random check-ins</strong>: about 4 a day between 08 and 22. You're asked at moments you didn't choose, so your mood data isn't only from the times you happened to remember. Answer right in the notification.</p>
+      </div>
+    </details>
+
+    <details class="guide-step">
+      <summary><span class="num">4</span>Add a calculated value and a goal<span class="hint">derivations and goals</span></summary>
+      <div class="body">
+        <p><strong>Derivations</strong> tab on 'mornings': <strong>'cold minutes a week'</strong>, the weekly total of Cold minutes. It behaves like any other measurement: chart it, compare it, set goals on it.</p>
+        <p><strong>Goals</strong> tab: Cold minutes at least 10 a week. A ring fills up as the week goes, and a streak starts when you keep it.</p>
+      </div>
+    </details>
+
+    <details class="guide-step">
+      <summary><span class="num">5</span>Pin it to the Dashboard<span class="hint">your focus right now</span></summary>
+      <div class="body">
+        <p>Pin 'mornings' and 'mood'. Expand a card to see the latest values and the goal ring, and tap + to log without opening the node.</p>
+      </div>
+    </details>
+
+    <details class="guide-step">
+      <summary><span class="num">6</span>Week 1: the Lab says wait<span class="hint">honest about thin data</span></summary>
+      <div class="body">
+        <p>Start a Lab card with Mood. The chart is there from day one, but <strong>Data reliability</strong> says <strong>"Not enough to say yet"</strong> and names what's missing, like "7 of 20 values". No guessing, no fake trends.</p>
+      </div>
+    </details>
+
+    <details class="guide-step">
+      <summary><span class="num">7</span>Week 3: patterns start to show<span class="hint">x axis</span></summary>
+      <div class="body">
+        <p>Set the card's <strong>X axis</strong> to Where: one bar per place. Maybe Outside is higher. Bars with few values are faded, so a single great day outside can't fool you.</p>
+        <p>Try <strong>Weekday</strong> or <strong>Hour of day</strong> too. The random check-ins make the hours fair.</p>
+      </div>
+    </details>
+
+    <details class="guide-step">
+      <summary><span class="num">8</span>Week 6: test the hunch<span class="hint">relations</span></summary>
+      <div class="body">
+        <p>Add Cold shower to the Mood card. The Lab compares mood on days with and without a cold shower, checks the <strong>same day and the next day</strong>, and takes out the trend over time first, so "both happened to rise" doesn't count.</p>
+        <p>You get a plain sentence, like "Mood is higher when Cold shower is yes", with how sure it is (<strong>Likely</strong> or <strong>Clear</strong>), or "no clear relation". It says <em>goes with</em>, never <em>causes</em>. Whatever the answer, it's yours.</p>
+      </div>
+    </details>
+
+    <details class="guide-step">
+      <summary><span class="num">9</span>Dig deeper, or take the data with you<span class="hint">analysis and CSV</span></summary>
+      <div class="body">
+        <p>Open Mood on the card and tap <strong>More</strong> under Analysis: your normal range, whether something changed around a date, weekday and time-of-day patterns, records.</p>
+        <p>Or Dashboard ⋮ → <strong>Save data</strong> → only the data, and open the CSV in a spreadsheet or Python. Save a full backup now and then too: everything lives on your phone only.</p>
+      </div>
+    </details>
   </main>
 
   <footer>
